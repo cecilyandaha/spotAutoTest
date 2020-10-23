@@ -2,5 +2,4 @@ redis
 requests
 configparser
 pymysql
-decimal
 unittest
