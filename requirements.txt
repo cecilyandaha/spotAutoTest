@@ -3,3 +3,4 @@ requests
 configparser
 pymysql
 BeautifulReport
+zmq
