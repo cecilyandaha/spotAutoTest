@@ -1,8 +1,8 @@
 import random
 import time
 
-from instract_util import cancelAllUsersOrders
-from spot_zmq_instruct import marketOrderPlace, limitOrderPlace, spotAddMoney, orderPlaceBatch, spotminusMoney
+from zmq_util_instract import cancelAllUsersOrders
+from zmq_spot_instruct import marketOrderPlace, limitOrderPlace, spotAddMoney, orderPlaceBatch, spotminusMoney
 from util import operSql
 
 
@@ -86,7 +86,7 @@ def batch_add_money():
     results = operSql(cSql, 'MysqlSpot')
     for result in results :
         spotAddMoney(result['user_id'], result['currency_id'], random.randrange(100000,10000000))
-
+batch_add_money()
 def batch_sub_money():
     cSql = 'select * from core_account '
     results = operSql(cSql, 'MysqlSpot')
@@ -108,4 +108,4 @@ def batch_order():
 #cancelAllUsersOrders()
 #batch_sub_money()
 #batch_add_money()
-batch_order()
+#batch_order()

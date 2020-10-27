@@ -26,12 +26,15 @@ def httpGet(url,header=None):
     return resdata
 
 #http post请求
-def httpPost(url,data,header=None):
+def httpPost(url,data=None,header=None,files=None):
     time.sleep(1)
     if header==None:
         header=header1
-    resp=requests.post(url=url,data=json.dumps(data), headers=header)
-    resdata={}
+    if files!=None:
+        print(header)
+        resp = requests.post(url=url, headers=header,files=files)
+    else:
+        resp = requests.post(url=url, data=json.dumps(data), headers=header)
     # if resp.status_code==200:
     #     resdata['code'] = 200
     #     if json.loads(resp.text)['code'] != 0 :

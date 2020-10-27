@@ -4,7 +4,7 @@ from BeautifulReport import BeautifulReport
 
 
 #from TestContractParam import TestContractParam
-from TestJavaInterface import TestJavaInterface
+from Test_Java_Interface import TestJavaInterface
 
 if __name__ == "__main__":
     print(unittest)

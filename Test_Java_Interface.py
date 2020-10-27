@@ -2,8 +2,8 @@ import random
 import time
 import unittest
 
-from instract_util import cancelAllUsersOrders, operSql, decimal_trans, dataTransform, contractDelist
-from javaInterface import *
+from zmq_util_instract import cancelAllUsersOrders, operSql, decimal_trans, dataTransform, contractDelist
+from java_Interface import *
 
 class TestJavaInterface(unittest.TestCase):
 

@@ -1,7 +1,7 @@
 import  unittest
 
-from instract_util import cancelAllUsersOrders
-from spot_zmq_instruct import *
+from zmq_util_instract import cancelAllUsersOrders
+from zmq_spot_instruct import *
 from util import *
 
 class TestContractParam(unittest.TestCase):

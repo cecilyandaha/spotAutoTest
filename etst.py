@@ -1,6 +1,6 @@
 import datetime
 import  unittest
-from spot_zmq_instruct import *
+from zmq_spot_instruct import *
 from util import *
 import random
 

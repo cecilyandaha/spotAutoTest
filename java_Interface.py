@@ -13,6 +13,17 @@ def kline_get(paralist):
     resp = httpGet(url)
     print(resp)
 
+# 修改k线
+def kline_repair():
+    path='/gateway/market/data/kline/repair'
+    url = SN + path
+    header = {'Content-Type': 'multipart/form-data;boundary=----WebKitFormBoundaryKXlHGXpmBOuxBZSK'}
+    files = {'file': ('kline.xlsx', open('kline.xlsx', 'rb+'), 'application/octet-stream')}
+    print(files['file'])
+    resp = httpPost(url,header=header,files = files)
+    print(resp)
+    return resp
+kline_repair()
 #kline_get([1,1603247122000,1602160722000,60000])
 
 # 获取所有交易对接口
@@ -115,7 +126,7 @@ paradic4={
 
 #pairs_get()
 #pairs_insert(paradic1)
-pairs_update(paradic4)
+#pairs_update(paradic4)
 #pairs_one_get(3)
 #pairPageInfo_get([1,10,2,'BTC-USDT'])
 

@@ -1,7 +1,7 @@
 import random
 import time
 
-from spot_zmq_instruct import orderPlaceBatch, spotAddMoney, orderAllCancel, orderCancel
+from zmq_spot_instruct import orderPlaceBatch, spotAddMoney, orderAllCancel, orderCancel
 from util import operSql
 
 
